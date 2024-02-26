@@ -222,6 +222,7 @@
                 success: function (response) {
                     console.log('Logged in...')
                     console.log('Success:', response);
+                    window.location.href = '@Url.Action("Dashboard", "Dashboard")'
                 },
                 error: function (xhr, status, error) {
                     console.error('Error:', xhr, status, error);
