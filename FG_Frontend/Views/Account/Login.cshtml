@@ -1,0 +1,233 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Login";
+    
+   @* var rememberChecked = !string.IsNullOrEmpty(Model.RememberMe) && Model.RememberMe.EqualsIgnoreCase("true") ? "checked" : "";*@
+}
+
+<!doctype html>
+<html>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<head>
+    @Html.Partial("_RegisterHead")
+</head>
+
+<body class="page-signup">
+    <div class="header">
+        <a href="https://www.fieldgroove.com" class="logo">
+            <img src="~/Assets/logo-fieldgroove-blue.svg" alt="FieldGroove Logo">
+        </a>
+        <ul class="links">
+            <li class="item">
+                <a href="https://www.fieldgroove.com/contractor-software-features">Features</a>
+            </li>
+            <li class="item has-sub-menu">
+                <a href="javascript:;">Industries</a>
+                <ul class="sub-menu">
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/flooring-software">Flooring</a>
+                    </li>
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/roofing-contractor-software">Roofing</a>
+                    </li>
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/drywall-estimating-software">Drywall</a>
+                    </li>
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/insulation-software">Insulation</a>
+                    </li>
+                </ul>
+            </li>
+            <!--<li class="item">
+                <a href="https://www.fieldgroove.com/pricing">Pricing</a>
+            </li>-->
+            <li class="item">
+                <a href="https://www.fieldgroove.com/faq">FAQs</a>
+            </li>
+            <li class="item">
+                <a href="https://info.fieldgroove.com/contact-us">Contact Us</a>
+            </li>
+            <li class="item">
+                <a href="/account/register">Sign Up</a>
+            </li>
+            <li class="item">
+                <a href="/account/login" class="active">Login</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header-mobile">
+        <a href="https://www.fieldgroove.com" class="logo">
+@*             <img src="@Url.Content("~/Assets/img/logo-fieldgroove-blue.svg")" alt="FieldGroove Logo">
+ *@        </a>
+        <a href="javascript:;" class="button-menu"><i></i></a>
+        <ul class="links">
+            <li class="item">
+@*                 <img src="@Url.Content("~/Assets/img/logo-fieldgroove-blue.svg")" alt="FieldGroove Logo">
+ *@            </li>
+            <li class="item active">
+                <a href="/account/login" class="active">Login</a>
+            </li>
+            <li class="item">
+                <a href="https://www.fieldgroove.com/contractor-software-features">Features</a>
+            </li>
+            <li class="item has-sub-menu">
+                <a href="javascript:;">Industries</a>
+                <span class="child-triggerm"></span>
+                <ul class="sub-menu">
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/flooring-software">Flooring</a>
+                    </li>
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/roofing-contractor-software">Roofing</a>
+                    </li>
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/drywall-estimating-software">Drywall</a>
+                    </li>
+                    <li class="item">
+                        <a href="https://www.fieldgroove.com/insulation-software">Insulation</a>
+                    </li>
+                </ul>
+            </li>
+            <!--<li class="item">
+                <a href="https://www.fieldgroove.com/pricing">Pricing</a>
+            </li>-->
+            <li class="item">
+                <a href="https://www.fieldgroove.com/faq">FAQs</a>
+            </li>
+            <li class="item">
+                <a href="https://info.fieldgroove.com/contact-us">Contact Us</a>
+            </li>
+            <li class="item">
+                <a href="/account/register">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main login">
+        <div class="signup-form">      
+
+                <div class="form">
+                    <div class="slider-wrapper" step="1">
+                        <div class="slider">
+                            <div class="side-item">
+                                <p class="title">SIGN IN</p>
+                                <div class="row-contorl">
+                                    <label for="">Email</label>
+                                <input type="email" required/>
+                                </div>
+                                <div class="row-contorl">
+                                    <label for="">Password</label>
+                                <input type="password" required />
+
+                                </div>
+                                <div class="SameAsPrimaryAddress">
+                                    <input type="checkbox" name="RememberMe" class='icheck-me' data-skin="square" data-color="blue" id="RememberMe"> <label for="RememberMe">Remember Me</label>
+                                </div>
+                                <div class="action">
+                                    <a href="/account/forgotpassword" class="button button-back">Forgot Password?</a>
+                                    <button type="submit" class="button button-next">Sign In <i class="icon-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            
+            <div class="description">        
+                
+
+                <h2>NEED AN ACCOUNT?</h2>
+                <h6>
+                    Create an account to start managing <br />
+                    your company. Click the "Create New Account"<br /> button below to get started
+                </h6>
+                <p>
+                    <a href="#" class="button button-back">Create New Account</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <ul class="mini-links login">
+        <li class="item">
+            <a href="https://www.fieldgroove.com/contractor-software-features">FEATURES</a>
+        </li>
+        <!--<li class="item">
+            <a href="https://www.fieldgroove.com/pricing">PRICING</a>
+        </li>-->
+        <li class="item">
+            <a href="https://www.fieldgroove.com/faq">FAQS</a>
+        </li>
+        <li class="item">
+            <a href="https://info.fieldgroove.com/contact-us">CONTACT US</a>
+        </li>
+        <li class="item">
+            <a href="/account/login">LOGIN</a>
+        </li>
+        <li class="item">
+            <a href="/account/register">SIGN UP</a>
+        </li>
+    </ul>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="item">
+                <div class="logo">
+                    <img src="~/Assets/logo-footer.jpg" alt="">
+                </div>
+                <div class="copyright">
+                    <div>Copyright &copy; FieldGroove, LLC @DateTime.Now.Year. All Rights Reserved. </div>
+                    <div>716 Newman Springs Road, Suite 307 Lincroft, NJ 07738</div>
+                </div>
+                <div class="links">
+                    <a href="https://www.fieldgroove.com/privacy" target="_blank">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="description">
+                    <div>
+                        We would love to show you the power of FieldGroove. To setup
+                    </div>
+                    <div>
+                        a demo or get an account setup, please contact us at
+                    </div>
+                    <div>
+                        <a href="mailto:sales@fieldgroove.com">sales@fieldgroove.com</a> or by phone at <a href="tel:2125370218">212-537-0218</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('.button-next').on('click', function () {
+            var username = $('input[type="email"]').val();
+            var password = $('input[type="password"]').val();
+            var data = {
+                username: username,
+                password: password
+            };
+
+            console.log('Sending data:', data);
+
+            $.ajax({
+                url: 'https://localhost:44346/Account',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (response) {
+                    console.log('Logged in...')
+                    console.log('Success:', response);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', xhr, status, error);
+                }
+            });
+        });
+    });
+</script>
+
